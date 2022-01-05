@@ -6,6 +6,15 @@ class Account
     end
 
     def deposit(depo)
-        @balance += depo
+        @balance += depo.to_i
+    end
+
+    def withdraw(with)
+        @balance -= with.to_i
+    end    
+
+    def date(dates)
+        time = Time.new
+        date = time.strftime('%d/%m/%Y')
     end
 end
